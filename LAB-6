@@ -24,3 +24,30 @@ Question-1.Name
 	</script>
 </body>
 </html>
+
+Question-2-Email
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+ <h1>Email</h1>
+	<div id="d1"></div>
+ <input id="email" type="text" email="email" value="" onkeyup="getEmail()" />
+ <input type="checkbox" checked="checkbox" name="i"><br>
+	<button onclick="getEmail()">Submit</button>
+	<script>
+		"use strict"
+		function getEmail(){
+			let email = document.getElementById('email').value;
+
+			if(email != ''){
+				document.getElementById('head1').innerHTML = email;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+</body>
+</html>
