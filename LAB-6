@@ -24,3 +24,24 @@ Gender <br> <input type="radio" name="gender" value="Male"> Male
 </fieldset>
 </body>
 </html>
+
+question-4:
+
+<html>
+<head>
+ <h2>Date of Birth</h2>
+ <body>
+<section id="date-of-birth">
+  <fieldset>
+    <legend>Date of Birth</legend>
+    <div class="field-inline-block">
+      <label>dd</label> / 
+      <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" />
+      <label>mm</label>/
+      <input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" />
+      <label>yyyy</label>
+      <input type="text" pattern="[0-9]*" maxlength="4" size="4" class="date-field date-field--year" />
+    </div>
+</head>
+</body>
+</html>
