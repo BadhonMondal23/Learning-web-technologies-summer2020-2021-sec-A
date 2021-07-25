@@ -1,0 +1,26 @@
+Question-1.Name
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+ <h1>Name</h1>
+	<div id="d1"></div>
+	<input id="name" type="text" name="name" value="" onkeyup="getName()" /><br>
+	<button onclick="getName()">Submit</button>
+	<script>
+		"use strict"
+		function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				document.getElementById('head1').innerHTML = name;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+</body>
+</html>
