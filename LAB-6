@@ -1,26 +1,67 @@
-question-3-Gender
+question-1-name
+<!DOCTYPE html>
 <html>
 <head>
-<script LANGUAGE="JavaScript">
-function ValidateForm(form){
-ErrorText= "";
-if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) &&( form.gender[2].checked == false))
-{
-alert ( "Please select at least one of them: Male or Female or Other" );
-return false;
-}
-if (ErrorText= "") { form.submit() }
-}
-</script>
+	<title>LAB-6</title>
 </head>
 <body>
- <fieldset>
-<form name="feedback" action="#" method=post>
-Gender <br> <input type="radio" name="gender" value="Male"> Male
-<input type="radio" name="gender" value="Female"> Female
-<input type="radio" name="gender" value="Other"> Other <br>
-<input type="button" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
-</form>
-</fieldset>
+	<div id="d1"></div>
+	<br>
+ <b>Name</b> <br>
+	<input id="name" type="text" name="name" value="" onkeyup="getName()" /><br>
+	<button onclick="getName()">submit</button>
+	<script>
+		"use strict"
+
+		/
+		function btnAction(){
+			let element = document.getElementById('head1');
+			element.innerHTML = "text from JS";
+		}
+
+		function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				document.getElementById('head1').innerHTML = name;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
+</body>
+</html>
+
+question-2-email
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAB-6</title>
+</head>
+<body>
+	<div id="d1"></div>
+	<br>
+ <b>Name</b> <br>
+	<input id="email" type="text" name="email" value="" onkeyup="getEmail()" /><br>
+	<button onclick="getEmail()">submit</button>
+	<script>
+		"use strict"
+
+		/
+		function btnAction(){
+			let element = document.getElementById('head1');
+			element.innerHTML = "text from JS";
+		}
+
+		function getEmail(){
+			let email = document.getElementById('email').value;
+
+			if(email != ''){
+				document.getElementById('head1').innerHTML = email;
+			}else{
+				alert('null value');
+			}
+		}
+	</script>
 </body>
 </html>
