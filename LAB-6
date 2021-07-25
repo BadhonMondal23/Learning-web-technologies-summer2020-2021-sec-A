@@ -1,53 +1,26 @@
-Question-1.Name
-
-<!DOCTYPE html>
+question-3-Gender
 <html>
 <head>
-	<title>Name</title>
+<script LANGUAGE="JavaScript">
+function ValidateForm(form){
+ErrorText= "";
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) &&( form.gender[2].checked == false))
+{
+alert ( "Please select at least one of them: Male or Female or Other" );
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+</script>
 </head>
 <body>
- <h1>Name</h1>
-	<div id="d1"></div>
-	<input id="name" type="text" name="name" value="" onkeyup="getName()" /><br>
-	<button onclick="getName()">Submit</button>
-	<script>
-		"use strict"
-		function getName(){
-			let name = document.getElementById('name').value;
-
-			if(name != ''){
-				document.getElementById('head1').innerHTML = name;
-			}else{
-				alert('null value');
-			}
-		}
-	</script>
-</body>
-</html>
-
-Question-2-Email
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Name</title>
-</head>
-<body>
- <h1>Email</h1>
-	<div id="d1"></div>
- <input id="email" type="text" email="email" value="" onkeyup="getEmail()" />
- <input type="checkbox" checked="checkbox" name="i"><br>
-	<button onclick="getEmail()">Submit</button>
-	<script>
-		"use strict"
-		function getEmail(){
-			let email = document.getElementById('email').value;
-
-			if(email != ''){
-				document.getElementById('head1').innerHTML = email;
-			}else{
-				alert('null value');
-			}
-		}
-	</script>
+ <fieldset>
+<form name="feedback" action="#" method=post>
+Gender <br> <input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other <br>
+<input type="button" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
+</form>
+</fieldset>
 </body>
 </html>
