@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script LANGUAGE="JavaScript">
+		function ValidateForm(form){
+		ErrorText= "";
+		if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) &&( form.gender[2].checked == false))
+		{
+		alert ( "Please select at least one of them: Male or Female or Other" );
+		return false;
+		}
+		if (ErrorText= "") { form.submit() }
+		}
+		</script>
+</head>
+<body>
+	<div id="d1"></div>
+	<br>
+ <b>Name</b> <br>
+	<input id="name" type="text" name="name" value="" onkeyup="getName()" /><br>
+	<button onclick="getName()">submit</button>
+	<input id="email" type="text" name="email" value="" onkeyup="getEmail()" /><br>
+	<button onclick="getEmail()">submit</button>
+	<fieldset>
+		<form name="feedback" action="#" method=post>
+		Gender <br> <input type="radio" name="gender" value="Male"> Male
+		<input type="radio" name="gender" value="Female"> Female
+		<input type="radio" name="gender" value="Other"> Other <br>
+		<input type="button" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
+		</form>
+		</fieldset>
+		<section id="date-of-birth">
+			<fieldset>
+					<legend>Date of Birth</legend>
+					<div class="field-inline-block">
+							<label>dd</label> / 
+							<input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" />
+							<label>mm</label>/
+							<input type="text" pattern="[0-9]*" maxlength="2" size="2" class="date-field" />
+							<label>yyyy</label>
+							<input type="text" pattern="[0-9]*" maxlength="4" size="4" class="date-field date-field--year" />
+					</div>
+	<script>
+		"use strict"
 
+		/
+		function btnAction(){
+			let element = document.getElementById('head1');
+			element.innerHTML = "text from JS";
+		}
+
+		function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				document.getElementById('head1').innerHTML = name;
+			}else{
+				alert('null value');			
+	</script>
+</body>
+</html>
