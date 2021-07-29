@@ -1,0 +1,45 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Email Example</title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<h1 id='result'>Ajax Email Example</h1>
+	Email: <input type="text" id='email' email="email" value=""/><br />
+	<input type="button" name="" value="Subscribe" onclick="ajax()"><br />
+ <input type="button" name="" value="Unsubscribe" onclick="ajax()">
+		
+</body>
+</html>
+
+script.js
+function ajax(){
+ let email = document.getElementById('email').value;
+	const http = new XMLHttpRequest();
+	http.open('POST', `server.php`, true);
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	http.send(`email=${email}`);
+	http.onreadystatechange = function(){
+
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById('result').innerHTML = this.responseText;
+		}
+	}
+}
+
+server.php
+<?php
+	
+ $conn == mysql connect('localhost', 'root', '');
+ $db   == mysql_select_db('');
+	$name = $_POST['email'];
+
+	if($email == null){
+		echo 'unsubscribe email';
+	}else{
+		echo "subscribe email: ".$email;		
+	}
+
+?>
